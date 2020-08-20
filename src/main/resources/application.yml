@@ -1,0 +1,45 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql:///shiro?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&allowMultiQueries=true
+#  jackson:
+#    serialization:
+#      #格式化输出
+#      indent_output: true
+#      #忽略无法转换的对象
+#      fail_on_empty_beans: false
+#      deserialization:
+#        #允许对象忽略json中不存在的属性
+#        accept_empty_String_as_null_object: true
+#        fail_on_unknown_properties: false
+#        use_big_decimal_for_floats: true
+#        use_java_array_for_json_array: true
+  reactor:
+    debug-agent:
+      enabled: true
+logging:
+  level:
+    org.mybatis.spring.mapper.ClassPathMapperScanner: error
+digimaple:
+  boot:
+    swagger:
+      title: 测试
+      description: 测试专用模块
+      enabled: true
+      version: 1.0.0
+      license: hhf
+      licenseUrl:
+      terms-of-service-url:
+      contact:
+        name: Huang.Hua.fu
+        email:
+        url:
+mybatis-plus:
+  # 支持统配符 * 或者 ; 分割
+  type-enums-package: com.hhf.bean.constant
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
